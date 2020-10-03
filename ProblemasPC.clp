@@ -214,7 +214,7 @@ CLIPS> ;;********************************
 		else
 		(assert (repair "Replace the motherboard."))))
 
-(defwule no-repais ""
+(defrule no-repais ""
 	(declare (salience -10))
 	(not (repair ?))
 	=>
@@ -234,7 +234,7 @@ CLIPS> ;;********************************
 	(printout t "The PC Diagnosis Expert System")
 	(printout t crlf crlf))
 
-defrule print-repair ""
+(defrule print-repair ""
 	(declare (salience 10))
 	(repair ?item)
 	=>
